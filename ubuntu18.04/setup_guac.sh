@@ -78,6 +78,14 @@ sudo /etc/init.d/tomcat8 restart
 
 sudo /etc/init.d/guacd start
 
+sudo ln -s /etc/init.d/guacd /etc/rc0.d/K01guacd
+sudo ln -s /etc/init.d/guacd /etc/rc1.d/K01guacd
+sudo ln -s /etc/init.d/guacd /etc/rc2.d/S01guacd
+sudo ln -s /etc/init.d/guacd /etc/rc3.d/S01guacd
+sudo ln -s /etc/init.d/guacd /etc/rc4.d/S01guacd
+sudo ln -s /etc/init.d/guacd /etc/rc5.d/S01guacd
+sudo ln -s /etc/init.d/guacd /etc/rc6.d/K01guacd
+
 rm -rf guacamole-server-1.0.0
 rm -f guacamole-server-1.0.0.tar.gz
 rm -f guacamole.war
