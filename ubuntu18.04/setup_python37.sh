@@ -27,6 +27,11 @@ cd /tmp/Python37/Python-3.7.0
 ./configure --enable-optimizations
 sudo make altinstall
 
-# make symbolic link as required
-pip update
+# Install pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python3.7 get-pip.py
+
+sudo rm get-pip.py
 sudo rm -rf /tmp/Python37
+
+echo "*** make symbolic link as required ***"

@@ -29,7 +29,7 @@ cd guacamole-server-1.0.0/
 
 make
 
-sudo make isntall
+sudo make install
 cd ..
 
 sudo ldconfig
@@ -52,24 +52,23 @@ sudo echo "basic-user-mapping: /etc/guacamole/user-mapping.xml" >> /etc/guacamol
 sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat8/.guacamole
 
 # sudo vi /etc/guacamole/user-mapping.xml
-sudo echo "<user-mapping>"
-sudo echo "        <authorize" 
-sudo echo "                username="tasat31"" 
-sudo echo "                password="fbb97712034a90222580dec5eb815c21""
-sudo echo "                encoding="md5">"
-sudo echo "                <connection name="Ubuntu18.04_terminal">"
-sudo echo "                        <protocol>ssh</protocol>"
-sudo echo "                        <param name="hostname">127.0.0.1</param>"
-sudo echo "                        <param name="port">22</param>"
-sudo echo "                        <param name="username">tasat31</param>"
-sudo echo "                </connection>"
-sudo echo "                <connection name="Ubuntu18.04_desktop">"
-sudo echo "                        <protocol>rdp</protocol>"
-sudo echo "                        <param name="hostname">127.0.0.1</param>"
-sudo echo "                        <param name="port">3389</param>"
-sudo echo "                </connection>"
-sudo echo "        </authorize>"
-sudo echo "</user-mapping>"
+sudo echo "<user-mapping>" > /etc/guacamole/user-mapping.xml
+sudo echo "        <authorize" >> /etc/guacamole/user-mapping.xml
+sudo echo "                username=\"tasat31\"" >> /etc/guacamole/user-mapping.xml
+sudo echo "                password=\"fbb97712034a90222580dec5eb815c21\"" >> /etc/guacamole/user-mapping.xml
+sudo echo "                encoding=\"md5\">" >> /etc/guacamole/user-mapping.xml
+sudo echo "                <connection name=\"Ubuntu18.04_terminal\">" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <protocol>ssh</protocol>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <param name=\"hostname\">127.0.0.1</param>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <param name=\"port\">22</param>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                </connection>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                <connection name=\"Ubuntu18.04_desktop\">" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <protocol>rdp</protocol>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <param name=\"hostname\">127.0.0.1</param>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <param name=\"port\">3389</param>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                </connection>" >> /etc/guacamole/user-mapping.xml
+sudo echo "        </authorize>" >> /etc/guacamole/user-mapping.xml
+sudo echo "</user-mapping>" >> /etc/guacamole/user-mapping.xml
 
 sudo chmod 600 /etc/guacamole/user-mapping.xml
 sudo chown tomcat8:tomcat8 /etc/guacamole/user-mapping.xml
