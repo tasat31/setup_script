@@ -5,14 +5,18 @@
 sudo sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 sudo /etc/init.d/ssh restart
 
-echo "Enter Login password ubuntu: sudo passwd ubuntu"
-sudo passwd ubuntu
+sudo apt install xrdp
 
-sudo apt install xrdp xfce4 xfce4-goodies tightvncserver
-echo xfce4-session > /home/ubuntu/.xsession
+sudo apt install xfce4 xfce4-goodies
+sudo apt install language-pack-ja-base language-pack-ja ibus-mozc
+sudo apt install tightvncserver
+echo xfce4-session > /home/tasat31/.xsession
 
-sudo cp /home/ubuntu/.xsession /etc/skel
+sudo cp /home/tasat31/.xsession /etc/skel
 
 sudo sed -i '0,/-1/s//ask-1/' /etc/xrdp/xrdp.ini
+
+sudo localectl set-locale LANG=ja_JP.UTF-8 LANGUAGE="ja_JP:ja"
+source /etc/default/locale
 
 sudo service xrdp restart
