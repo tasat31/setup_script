@@ -13,6 +13,7 @@ sudo apt install nginx
 sudo apt install mysql-server
 sudo mysql_secure_installation
 
+sudo apt install libmysqlclient-dev
 
 # https://thishosting.rocks/install-php-on-ubuntu/
 
