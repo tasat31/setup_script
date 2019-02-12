@@ -22,11 +22,10 @@ sudo apt install opera-stable
 
 # Midori install
 # https://www.midori-browser.org/download/
-sudo snap install midori
+# sudo snap install midori
 
 # tightvnc viewer
 if [ -d $HOME/tvnjviewer ]; then
-   ;
 else
    mkdir $HOME/tvnjviewer
 fi
