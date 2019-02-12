@@ -31,6 +31,8 @@ sudo make altinstall
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo python3.7 get-pip.py
 
+sudo pip install virtualenv
+
 sudo rm get-pip.py
 sudo rm -rf /tmp/Python37
 
