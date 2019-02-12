@@ -10,9 +10,9 @@ sudo apt install xrdp
 sudo apt install xfce4 xfce4-goodies
 sudo apt install language-pack-ja-base language-pack-ja ibus-mozc
 sudo apt install tightvncserver
-echo xfce4-session > /home/tasat31/.xsession
+echo xfce4-session > /home/$USER/.xsession
 
-sudo cp /home/tasat31/.xsession /etc/skel
+sudo cp /home/$USER/.xsession /etc/skel
 
 sudo sed -i '0,/-1/s//ask-1/' /etc/xrdp/xrdp.ini
 
