@@ -11,13 +11,15 @@ sudo apt update
 sudo apt install nginx
 
 sudo apt install mysql-server
+
 sudo mysql_secure_installation
 
 sudo apt install libmysqlclient-dev
 
 # https://thishosting.rocks/install-php-on-ubuntu/
 
-sudo apt install php php-mysql
+# !! Attempt to Apache server !!
+#sudo apt install php php-mysql
 
 echo "*** recommend Nginx configuration ***"
 echo "sudo ufw allow 'Nginx HTTP'"
