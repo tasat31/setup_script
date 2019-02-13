@@ -66,6 +66,8 @@ sudo echo "                <connection name=\"Ubuntu18.04_desktop\">" >> /etc/gu
 sudo echo "                        <protocol>rdp</protocol>" >> /etc/guacamole/user-mapping.xml
 sudo echo "                        <param name=\"hostname\">127.0.0.1</param>" >> /etc/guacamole/user-mapping.xml
 sudo echo "                        <param name=\"port\">3389</param>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <param name=\"enable-drive\">true</param>" >> /etc/guacamole/user-mapping.xml
+sudo echo "                        <param name=\"drive-path\">/home/$USER</param>" >> /etc/guacamole/user-mapping.xml
 sudo echo "                </connection>" >> /etc/guacamole/user-mapping.xml
 sudo echo "        </authorize>" >> /etc/guacamole/user-mapping.xml
 sudo echo "</user-mapping>" >> /etc/guacamole/user-mapping.xml
