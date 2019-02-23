@@ -7,4 +7,4 @@ my favorite settings for developing server(VPS or Cloud)
 
 ## Caution
 setup scripts on this project using the account 'tasat31', so you must replace your own.
-ex. On AWS Ubuntu19.04, 'ubuntu' is used.
+ex. On AWS Ubuntu18.04, 'ubuntu' is used.

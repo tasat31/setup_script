@@ -26,6 +26,7 @@ sudo apt install opera-stable
 
 # tightvnc viewer
 if [ -d $HOME/tvnjviewer ]; then
+   echo "DIR:tvnviewer exists"
 else
    mkdir $HOME/tvnjviewer
 fi
