@@ -16,9 +16,9 @@ sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-stabl
 sudo apt update
 
 ## google chrome install
-sudo apt install google-chrome-stable
+sudo apt -y install google-chrome-stable
 ## Opera install
-sudo apt install opera-stable
+sudo apt -y install opera-stable
 
 # Midori install
 # https://www.midori-browser.org/download/

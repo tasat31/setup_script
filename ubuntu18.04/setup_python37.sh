@@ -36,4 +36,8 @@ sudo pip install virtualenv
 sudo rm get-pip.py
 sudo rm -rf /tmp/Python37
 
+echo ""
+echo ""
+echo ""
+echo "*** Python3.7, pip, virtualenv installed ***"
 echo "*** make symbolic link as required ***"

@@ -5,7 +5,20 @@
 #########################
 sudo apt update
 # make, gcc
-sudo apt install make gcc
+sudo apt -y install make gcc
 
 # git
-sudo apt install git
+sudo apt -y install git
+
+echo ""
+echo ""
+echo ""
+echo "*** make installed ***"
+make --version
+
+echo ""
+echo ""
+echo ""
+echo "*** gcc installed ***"
+gcc --version
+

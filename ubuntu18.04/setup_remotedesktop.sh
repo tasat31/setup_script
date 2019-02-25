@@ -5,11 +5,11 @@
 sudo sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 sudo /etc/init.d/ssh restart
 
-sudo apt install xrdp
+sudo apt -y install xrdp
 
-sudo apt install xfce4 xfce4-goodies
-sudo apt install language-pack-ja-base language-pack-ja ibus-mozc
-sudo apt install tightvncserver
+sudo apt -y install xfce4 xfce4-goodies
+sudo apt -y install language-pack-ja-base language-pack-ja ibus-mozc
+#sudo apt install tightvncserver
 echo xfce4-session > /home/$USER/.xsession
 
 sudo cp /home/$USER/.xsession /etc/skel

@@ -6,16 +6,16 @@
 
 # Pre-requisite
 echo "install required package..."
-sudo apt install libssh2-1-dev libtelnet-dev libpango1.0-dev libossp-uuid-dev libcairo2-dev libpng-dev libjpeg-turbo8-dev libvncserver-dev libfreerdp-dev libvorbis-dev libssl-dev libpulse-dev libwebp-dev libavcodec-dev libavutil-dev libswscale-dev
+sudo apt -y install libssh2-1-dev libtelnet-dev libpango1.0-dev libossp-uuid-dev libcairo2-dev libpng-dev libjpeg-turbo8-dev libvncserver-dev libfreerdp-dev libvorbis-dev libssl-dev libpulse-dev libwebp-dev libavcodec-dev libavutil-dev libswscale-dev
 
 # JDK
 echo "install JDK"
-sudo apt install openjdk-8-jdk
+sudo apt -y install openjdk-8-jdk
 
 # Tomcat
 
 echo "install Tomcat"
-sudo apt install tomcat8 tomcat8-admin tomcat8-docs ghostscript
+sudo apt -y install tomcat8 tomcat8-admin tomcat8-docs ghostscript
 
 
 # guacamole-server-1.0.0
@@ -90,3 +90,11 @@ sudo ln -s /etc/init.d/guacd /etc/rc6.d/K01guacd
 rm -rf guacamole-server-1.0.0
 rm -f guacamole-server-1.0.0.tar.gz
 rm -f guacamole.war
+
+
+echo ""
+echo ""
+echo ""
+echo "*** Configuring the files below, and restrat guacd(if needed) ***"
+echo "- /etc/guacamole/guacamole.properties"
+echo "- /etc/guacamole/user-mapping.xml"
