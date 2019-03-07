@@ -4,6 +4,13 @@
 #  target : Ubuntu18.04 #
 #########################
 
+if [ $# -ne 1 ]; then
+  echo "Please specify your USERID."
+  exit 1
+else
+  USER=$1
+fi
+
 # Pre-requisite
 echo "install required package..."
 sudo apt -y install libssh2-1-dev libtelnet-dev libpango1.0-dev libossp-uuid-dev libcairo2-dev libpng-dev libjpeg-turbo8-dev libvncserver-dev libfreerdp-dev libvorbis-dev libssl-dev libpulse-dev libwebp-dev libavcodec-dev libavutil-dev libswscale-dev
