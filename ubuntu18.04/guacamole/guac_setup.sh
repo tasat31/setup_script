@@ -50,34 +50,34 @@ sudo mkdir /etc/guacamole
 sudo mkdir /usr/share/tomcat8/.guacamole
 
 # sudo vi /etc/guacamole/guacamole.properties
-sudo echo "guacd-hostname: localhost" >  /etc/guacamole/guacamole.properties
-sudo echo "guacd-port: 4822"          >> /etc/guacamole/guacamole.properties
-sudo echo "user-mapping: /etc/guacamole/user-mapping.xml"  >> /etc/guacamole/guacamole.properties
-sudo echo "auth-provider: net.sourceforge.guacamole.net.basic.BasicFileAuthenticationProvider" >> /etc/guacamole/guacamole.properties
-sudo echo "basic-user-mapping: /etc/guacamole/user-mapping.xml" >> /etc/guacamole/guacamole.properties
+echo "guacd-hostname: localhost"                      | sudo tee    /etc/guacamole/guacamole.properties
+echo "guacd-port: 4822"                               | sudo tee -a /etc/guacamole/guacamole.properties
+echo "user-mapping: /etc/guacamole/user-mapping.xml"  | sudo tee -a /etc/guacamole/guacamole.properties
+echo "auth-provider: net.sourceforge.guacamole.net.basic.BasicFileAuthenticationProvider" | sudo tee -a /etc/guacamole/guacamole.properties
+echo "basic-user-mapping: /etc/guacamole/user-mapping.xml" | sudo tee -a /etc/guacamole/guacamole.properties
 
 sudo ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat8/.guacamole
 
 # sudo vi /etc/guacamole/user-mapping.xml
-sudo echo "<user-mapping>" > /etc/guacamole/user-mapping.xml
-sudo echo "        <authorize" >> /etc/guacamole/user-mapping.xml
-sudo echo "                username=\"tasat31\"" >> /etc/guacamole/user-mapping.xml
-sudo echo "                password=\"fbb97712034a90222580dec5eb815c21\"" >> /etc/guacamole/user-mapping.xml
-sudo echo "                encoding=\"md5\">" >> /etc/guacamole/user-mapping.xml
-sudo echo "                <connection name=\"Ubuntu18.04_terminal\">" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <protocol>ssh</protocol>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <param name=\"hostname\">127.0.0.1</param>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <param name=\"port\">22</param>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                </connection>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                <connection name=\"Ubuntu18.04_desktop\">" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <protocol>rdp</protocol>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <param name=\"hostname\">127.0.0.1</param>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <param name=\"port\">3389</param>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <param name=\"enable-drive\">true</param>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                        <param name=\"drive-path\">/home/$USER</param>" >> /etc/guacamole/user-mapping.xml
-sudo echo "                </connection>" >> /etc/guacamole/user-mapping.xml
-sudo echo "        </authorize>" >> /etc/guacamole/user-mapping.xml
-sudo echo "</user-mapping>" >> /etc/guacamole/user-mapping.xml
+echo "<user-mapping>"                                                         | sudo tee    /etc/guacamole/user-mapping.xml
+echo "        <authorize"                                                     | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                username=\"tasat31\""                                   | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                password=\"fbb97712034a90222580dec5eb815c21\""          | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                encoding=\"md5\">"                                      | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                <connection name=\"Ubuntu18.04_terminal\">"             | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <protocol>ssh</protocol>"                       | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <param name=\"hostname\">127.0.0.1</param>"     | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <param name=\"port\">22</param>"                | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                </connection>"                                          | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                <connection name=\"Ubuntu18.04_desktop\">"              | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <protocol>rdp</protocol>"                       | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <param name=\"hostname\">127.0.0.1</param>"     | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <param name=\"port\">3389</param>"              | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <param name=\"enable-drive\">true</param>"      | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                        <param name=\"drive-path\">/home/$USER</param>" | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "                </connection>"                                          | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "        </authorize>"                                                   | sudo tee -a /etc/guacamole/user-mapping.xml
+echo "</user-mapping>"                                                        | sudo tee -a /etc/guacamole/user-mapping.xml
 
 sudo chmod 600 /etc/guacamole/user-mapping.xml
 sudo chown tomcat8:tomcat8 /etc/guacamole/user-mapping.xml
