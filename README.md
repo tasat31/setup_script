@@ -10,5 +10,10 @@ setup scripts on this project using the account 'tasat31', so you must replace y
 
 ex. On AWS Ubuntu18.04, 'ubuntu' is used.
 
+## Trouble Shooting
+If the direcotry "thinclient_drives" is not mounted:
+
+fusermount -zu ~/thinclient_drives
+
 ## Reference
 https://specifications.freedesktop.org/
