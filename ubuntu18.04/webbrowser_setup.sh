@@ -19,18 +19,3 @@ sudo apt update
 sudo apt -y install google-chrome-stable
 ## Opera install
 sudo apt -y install opera-stable
-
-# Midori install
-# https://www.midori-browser.org/download/
-# sudo snap install midori
-
-# tightvnc viewer
-if [ -d $HOME/tvnjviewer ]; then
-   echo "DIR:tvnviewer exists"
-else
-   mkdir $HOME/tvnjviewer
-fi
-
-wget 'https://www.tightvnc.com/download/2.8.3/tvnjviewer-2.8.3-bin-gnugpl.zip' -O $HOME/tvnjviewer/tvnjviewer-2.8.3-bin-gnugpl.zip
-
-unzip $HOME/tvnjviewer/tvnjviewer-2.8.3-bin-gnugpl.zip -d $HOME/tvnjviewer/
