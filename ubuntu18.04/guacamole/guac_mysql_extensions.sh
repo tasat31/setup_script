@@ -12,7 +12,9 @@ echo "CREATE USER 'guacamole_user'@'localhost' IDENTIFIED BY 'some_password';" |
 echo "GRANT SELECT,INSERT,UPDATE,DELETE ON guacamole_db.* TO 'guacamole_user'@'localhost';" | sudo mysql -u root guacamole_db
 echo "FLUSH PRIVILEGES;" | sudo mysql -u root guacamole_db
 
-cat mysql/schema/*.sql | mysql -u root -p guacamole_db
+cat mysql/schema/001-create-schema.sql     | sudo mysql -u root guacamole_db
+cat mysql/schema/002-create-admin-user.sql | sudo mysql -u root guacamole_db
+#cat mysql/schema/upgrade/upgrade-pre-1.0.0.sql | mysql -u root -p guacamole_db
 
 # 1. Create the GUACAMOLE_HOME/extensions directory, if it does not already exist.
 sudo mkdir /etc/guacamole/extensions
@@ -32,7 +34,7 @@ rm -rf guacamole-auth-jdbc-1.0.0
 
 sudo apt install libmysql-java
 sudo mkdir /etc/guacamole/lib
-sudo cp /usr/share/java//usr/share/java/mysql-connector-java-5.1.45.jar /etc/guacamole/lib
+sudo cp /usr/share/java/mysql-connector-java-5.1.45.jar /etc/guacamole/lib
 
 sudo /etc/init.d/tomcat8 restart
 
