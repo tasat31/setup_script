@@ -5,4 +5,4 @@ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 
 sudo apt update
 
-sudo apt install r-base
+sudo apt install -y r-base
