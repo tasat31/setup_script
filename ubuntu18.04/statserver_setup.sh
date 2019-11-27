@@ -31,19 +31,5 @@ popd
 sudo pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose
 #sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
 
-# https://jupyterhub.readthedocs.io/en/stable/quickstart.html#prerequisites
-
-sudo pip3 install jupyterhub
-sudo npm install -g configurable-http-proxy
-sudo pip3 install notebook  # needed if running the notebook servers locally
-
-# sudo pip3 install jupyterlab
-
-
-jupyterhub -h
-configurable-http-proxy -h
-
-# To allow multiple users to sign in
-# sudo jupyterhub
-# http://...:8000
-jupyterhub
+# https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
+sudo pip3 install jupyterlab
