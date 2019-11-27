@@ -5,3 +5,9 @@
 sudo apt -y install rclone
 
 rclone config
+
+# after rclone config
+# ex. GoogleDrive
+
+# mkdir ~/mygoogledrive
+# rclone mount mygoogledrive: ~/mygoogledrive &
