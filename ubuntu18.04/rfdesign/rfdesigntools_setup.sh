@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # ngspice
-sudo apt install ngspice
+sudo apt -y install ngspice
 
 # https://snapcraft.io/qucs-spice
-sudo apt-get install qt5-default
+sudo apt -y install qt5-default
 sudo snap install qucs-spice
 
 # Change locale for qucs-spice
@@ -30,5 +30,5 @@ wget -q http://build.openmodelica.org/apt/openmodelica.asc -O- | sudo apt-key ad
 apt-key fingerprint
 
 sudo apt update
-sudo apt install openmodelica
-sudo apt install omlib-.* # Installs optional Modelica libraries (most have not been tested with OpenModelica)
+sudo apt -y install openmodelica
+#sudo apt install omlib-.* # Installs optional Modelica libraries (most have not been tested with OpenModelica)
