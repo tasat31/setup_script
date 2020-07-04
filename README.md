@@ -15,5 +15,8 @@ If the direcotry "thinclient_drives" is not mounted:
 
 fusermount -zu ~/thinclient_drives
 
+guacamole: default port 8080
+sudo ufw allow 8080
+
 ## Reference
 https://specifications.freedesktop.org/
