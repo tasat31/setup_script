@@ -27,6 +27,8 @@ rm rstudio-server-1.2.5019-amd64.deb
 
 popd
 
+rm -rf /tmp/statsv
+
 # https://www.scipy.org/install.html
 sudo pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose
 #sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
